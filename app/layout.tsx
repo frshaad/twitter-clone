@@ -2,6 +2,8 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 
+import FollowBar from '@/components/followbar';
+import Sidebar from '@/components/sidebar';
 import { inter } from '@/lib/font';
 
 export const metadata: Metadata = {
@@ -16,7 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='h-screen bg-black text-white'>
+          <div className='container mx-auto h-full xl:px-28'>
+            <div className='grid h-full grid-cols-4'>
+              <Sidebar />
+              <main className='col-span-3 border-x border-neutral-800 lg:col-span-2'>
+                {children}
+              </main>
+              <FollowBar />
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
