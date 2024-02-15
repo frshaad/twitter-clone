@@ -5,7 +5,7 @@ export default function SidebarLogo() {
   return (
     <Link
       href='/'
-      className='ml-3 flex size-14 items-center justify-center rounded-full p-4 transition hover:bg-blue-300'
+      className='flex size-14 items-center justify-center rounded-full p-4 transition hover:bg-sky-400 lg:ml-[14px]'
     >
       <BsTwitter size={28} />
     </Link>
